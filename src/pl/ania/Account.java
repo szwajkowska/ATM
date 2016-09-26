@@ -1,25 +1,34 @@
 package pl.ania;
 
-/**
- * Created by lukasz on 2016-09-24.
- */
 public class Account {
 
     private int moneyOnAccount;
 
-    public Account(int moneyOnAccount){
+    public Card getCard() {
+        return card;
+    }
+
+    private Card card;
+
+    public Account(int moneyOnAccount, Card card){
         this.moneyOnAccount = moneyOnAccount;
+        this.card = card;
     }
 
     public int getMoneyOnAccount() {
         return moneyOnAccount;
     }
 
-    private boolean withdrawMoney(int moneyOut) {
+
+
+    public boolean withdrawMoney(int moneyOut) {
         if (moneyOut <= moneyOnAccount) {
             moneyOnAccount -= moneyOut;
             return true;
         }
+        System.out.println("Nie ma tyle srodkow na koncie");
         return false;
     }
+
+
 }
