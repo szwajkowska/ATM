@@ -1,7 +1,6 @@
 package pl.ania;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Card {
@@ -10,8 +9,15 @@ public class Card {
 
     private String PIN;
 
-    public Card(String PIN) {
+    private String id;
+
+    public Card(String PIN, String id) {
         this.PIN = PIN;
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getPIN() {
