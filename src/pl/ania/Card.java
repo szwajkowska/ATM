@@ -24,10 +24,6 @@ public class Card {
         return PIN;
     }
 
-    public boolean checkPIN(String userPIN) {
-        return userPIN.equals(PIN);
-
-    }
     public void changePIN() {
 
         boolean PINcorrect;
@@ -38,6 +34,7 @@ public class Card {
             String userChoice = reading.nextLine();
             if (pattern.matcher(userChoice).matches()) {
                 PIN = userChoice;
+
             } else {
                 System.out.println("Niepoprawny PIN");
                 PINcorrect = false;
