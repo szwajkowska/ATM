@@ -32,13 +32,14 @@ public class ATM {
 
             String PIN = "Prosze podac PIN";
 
-            readOption(PIN, Arrays.asList(account.getCard().getPIN()));
+            readOption(PIN, Arrays.asList(account.getCard().getPIN()));//czemu to jest lista?
 
             boolean returnToMenu;
 
             do {
                 returnToMenu = false;
-                String message = "Wybierz opcję: \n 1) Wypłać gotówkę - wybierz 1 \n 2) Wyświetl stan konta - wybierz 2 \n 3) Zmien PIN -wybierz 3 \n 4) Wyjście - wybierz 4";
+                String message = "Wybierz opcję: \n 1) Wypłać gotówkę - wybierz 1 \n 2) Wyświetl stan konta - wybierz 2 \n " +
+                    "3) Zmien PIN -wybierz 3 \n 4) Wyjście - wybierz 4";
                 String userChoice = readOption(message, Arrays.asList("1", "2", "3", "4"));
                 if (userChoice.equals("1")) {
                     withdraw(account);

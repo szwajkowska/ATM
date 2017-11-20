@@ -23,7 +23,8 @@ public class AccountRepository {
 
     public void writeToFile(Account accountOne) {
         try {
-            Files.write(Paths.get("accounts/", String.valueOf(accountOne.getCard().getId())), Arrays.asList(String.valueOf(accountOne.getMoneyOnAccount()), accountOne.getCard().getPIN()));
+            Files.write(Paths.get("accounts/", String.valueOf(accountOne.getCard().getId())),
+                Arrays.asList(String.valueOf(accountOne.getMoneyOnAccount()), accountOne.getCard().getPIN()));
         } catch (IOException fnfe) {
             fnfe.printStackTrace();
         }
